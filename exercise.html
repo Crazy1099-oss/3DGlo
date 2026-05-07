@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Второе задание 19го урока</title>
+</head>
+
+<body>
+
+    <div id="output"></div>
+
+    <script>
+        function getGreeting(hour) {
+            if (hour >= 5 && hour < 12) return "Доброе утро"
+            if (hour >= 12 && hour < 18) return "Добрый день"
+            if (hour >= 18 && hour < 23) return "Добрый вечер"
+            return "Доброй ночи"
+        }
+
+        function update() {
+            const now = new Date()
+
+            const greeting = getGreeting(now.getHours())
+
+            const days = [
+                "Воскресенье", "Понедельник", "Вторник",
+                "Среда", "Четверг", "Пятница", "Суббота"
+            ];
+            const weekday = days[now.getDay()]
+
+
+            const time = now.toLocaleTimeString("en-US", { hour12: true })
+
+            const nextYear = new Date(now.getFullYear() + 1, 0, 1)
+            const diffMs = nextYear - now
+            const diffDays = Math.ceil(diffMs / (1000 * 60 * 60 * 24))
+
+            document.getElementById("output").innerHTML = `
+                <h3>${greeting}</h3>
+                <p>Сегодня: ${weekday}</p>
+                <p>Текущее время: ${time}</p>
+                <p>До нового года осталось ${diffDays} дней</p>
+            `
+        }
+
+        update()
+        setInterval(update, 1000)
+    </script>
+
+</body>
+
+</html>
