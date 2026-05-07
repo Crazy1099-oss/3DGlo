@@ -1,0 +1,1 @@
+(()=>{var o={725(){console.log("Я one.js")},951(){console.log("Я two.js")}},r={};function e(s){var t=r[s];if(void 0!==t)return t.exports;var n=r[s]={exports:{}};return o[s](n,n.exports,e),n.exports}e(725),e(951)})();
