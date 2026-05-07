@@ -1,1 +1,0 @@
-console.log('Я one.js');

@@ -1,1 +1,5 @@
-console.log('Я two.js');
+const two = () => {
+    console.log('Привет я two.js')
+}
+
+export default two
