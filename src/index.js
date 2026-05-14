@@ -5,6 +5,7 @@ import smoothScroll from './modules/smoothScroll.js'
 import form from './modules/form.js'
 import tabs from './modules/tabs.js'
 import slider from './modules/slider.js'
+import calc from './modules/calc.js'
 
 timer('18 may 2026')
 menu()
@@ -13,3 +14,4 @@ smoothScroll()
 form()
 tabs()
 slider()
+calc(100)
