@@ -36,8 +36,7 @@ const modal = () => {
 
     buttons.forEach(btn => {
         btn.addEventListener('click', animateOpen)
-    })
-    
+    }) 
 
     modal.addEventListener('click', (e) => {
         if(!e.target.closest('.popup-content') || e.target.classList.contains('popup-close')) {
